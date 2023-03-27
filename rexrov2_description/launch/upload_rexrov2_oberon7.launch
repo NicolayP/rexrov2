@@ -22,7 +22,7 @@
   <arg name="world_frame" default="world"/>
 
   <group ns="$(arg namespace)">
-    <param name="robot_description" command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_oberon7.xacro' --inorder
+    <param name="robot_description" command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_oberon7.xacro' 
                  use_simplified_mesh:=$(arg use_simplified_mesh)
                  debug:=$(arg debug)
                  namespace:=$(arg namespace)

@@ -28,7 +28,7 @@ roslib.load_manifest(PKG)
 
 def call_xacro(xml_file):
     assert os.path.isfile(xml_file), 'Invalid XML xacro file'
-    return subprocess.check_output(['xacro', '--inorder', xml_file])
+    return subprocess.check_output(['xacro', '', xml_file])
 
 
 class TestRexROVURDFFiles(unittest.TestCase):

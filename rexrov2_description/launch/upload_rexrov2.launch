@@ -4,7 +4,7 @@
 
   <arg name="x" default="0" doc="X coordinate of the vehicle's initial position (in ENU)"/>
   <arg name="y" default="0" doc="Y coordinate of the vehicle's initial position (in ENU)"/>    
-  <arg name="z" default="-20" doc="Z coordinate of the vehicle's initial position (in ENU)"/>
+  <arg name="z" default="-50" doc="Z coordinate of the vehicle's initial position (in ENU)"/>
   <arg name="roll" default="0.0" doc="Roll angle of the vehicle's initial orientation"/>
   <arg name="pitch" default="0.0" doc="Pitch angle of the vehicle's initial orientation"/>
   <arg name="yaw" default="0.0" doc="Yaw angle of the vehicle's initial orientation"/>
@@ -26,7 +26,7 @@
   <group ns="$(arg namespace)">
     <group if="$(arg use_ned_frame)">
       <param name="robot_description"
-             command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_$(arg mode).xacro' --inorder
+             command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_$(arg mode).xacro' 
                       use_simplified_mesh:=$(arg use_simplified_mesh)
                       debug:=$(arg debug)
                       namespace:=$(arg namespace)
@@ -35,7 +35,7 @@
 
     <group unless="$(arg use_ned_frame)">
       <param name="robot_description"
-             command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_$(arg mode).xacro' --inorder
+             command="$(find xacro)/xacro '$(find rexrov2_description)/robots/rexrov2_$(arg mode).xacro' 
                       use_simplified_mesh:=$(arg use_simplified_mesh)
                       debug:=$(arg debug)
                       namespace:=$(arg namespace)
