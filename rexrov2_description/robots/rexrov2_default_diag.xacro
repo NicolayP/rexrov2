@@ -21,8 +21,8 @@
   <xacro:arg name="use_simplified_mesh" default="false"/>
   <xacro:arg name="inertial_reference_frame" default="world"/>
   <!-- Include the ROV macro file -->
-  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_base.xacro"/>
-  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2.gazebo.xacro"/>
+  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_base_diag.xacro"/>
+  <xacro:include filename="$(find rexrov2_description)/urdf/rexrov2_diag.gazebo.xacro"/>
 
   <!-- Create the rexrov2 -->
   <xacro:rexrov2_base
