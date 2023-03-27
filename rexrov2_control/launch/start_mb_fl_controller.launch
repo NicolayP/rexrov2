@@ -38,7 +38,8 @@ roslaunch rexrov2_control start_mb_fl_controller.launch
     <arg name="axis_z" default="1"/>
 
     <!-- Vehicle parameter for the controller -->
-    <arg name="model_params_file" default="$(find rexrov2_control)/config/model_params.yaml"/>
+    <arg name="model_params_file" default="$(find rexrov2_control)/config/model_params_exact.yaml"/>
+    <rosparam file="$(arg model_params_file)" command="load"/>
 
     <!-- Thruster manager configuration -->
     <arg name="thruster_manager_output_dir" default="$(find rexrov2_control)/config"/>
